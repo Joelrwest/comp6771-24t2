@@ -4,14 +4,24 @@
 
 TEST_CASE("Remove multiple items in a row") {
     /*
-    TODO
-
     vec_set (before) [a b c d e e f g]
     blacklist [e a z]
     vec_set (after) [b c d f g]
     */
+    std::vector<char> vec_set {};
+    vec_set.push_back('a');
+    vec_set.emplace_back('b');
+    vec_set.push_back('c');
+    vec_set.push_back('d');
+    vec_set.push_back('e');
+    vec_set.push_back('e');
+    vec_set.push_back('f');
+    vec_set.push_back('g');
 
-    CHECK(false);
+    const std::vector<char> blacklist {'e', 'a', 'z'};
+    set_difference(vec_set, blacklist);
+
+    CHECK(vec_set == std::vector<char> {'b', 'c', 'd', 'f', 'g'});
 }
 
 TEST_CASE("Empty vector unchanged") {

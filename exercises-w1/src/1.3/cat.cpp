@@ -9,7 +9,14 @@ int main() {
 }
 */
 
+#include <iostream>
+
 int main()
 {
-    // TODO
+    std::string buffer {};
+
+    std::getline(std::cin, buffer);
+    std::cout << buffer << std::endl;
+
+    return 0;
 }

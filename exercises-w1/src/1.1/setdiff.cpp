@@ -13,7 +13,9 @@ void set_difference(std::vector<char>& vec_set, const std::vector<char>& blackli
 */
 auto set_difference(std::vector<char>& vec_set, const std::vector<char>& blacklist) -> void
 {
-    // TODO
-    (void)vec_set;
-    (void)blacklist;
+    for (const char item : blacklist)
+    {
+        // Remove it from vec_set
+        std::erase(vec_set, item);
+    }
 }

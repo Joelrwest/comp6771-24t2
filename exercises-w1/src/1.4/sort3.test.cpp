@@ -32,11 +32,16 @@ TEST_CASE("int: Descending") {
 }
 
 TEST_CASE("int: Two same, one different") {
-    int x = 0;
-    int y = 1;
-    int z = 2;
+    int x = 0; // 1
+    int y = 1; // 2
+    int z = 2; // 0
 
     x = y;
+    /*
+    x = 2
+    y = 1
+    z = 0
+    */
     sort3(x, z, y);
     CHECK(x == z);
     CHECK(x < y);

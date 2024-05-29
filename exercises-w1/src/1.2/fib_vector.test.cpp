@@ -23,8 +23,9 @@ TEST_CASE("Works when n == 1")
 
 TEST_CASE("Works when n == 5")
 {
-    // TODO
-    CHECK(false);
+    // {1, 1, 2, 3, 5}
+    const std::vector<int> fib = fibonacci(5);
+    CHECK(fib == std::vector<int> {1, 1, 2, 3, 5});
 }
 
 

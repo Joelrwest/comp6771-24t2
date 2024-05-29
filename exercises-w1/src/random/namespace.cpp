@@ -3,6 +3,10 @@
 /*
 In some other file...
 */
+
+/*
+joels_library_print()
+*/
 namespace joels_library
 {
 void print()

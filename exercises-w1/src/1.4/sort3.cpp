@@ -1,17 +1,33 @@
 #include "sort3.h"
 
+#include <iostream>
+
 auto sort3(int& a, int& b, int& c) -> void
 {
-    // TODO
-    (void)a;
-    (void)b;
-    (void)c;
+	if (a > c) {
+		std::swap(a, c);
+	}
+
+	if (b > c) {
+		std::swap(b, c);
+	}
+
+	if (a > b) {
+		std::swap(a, b);
+	}
 }
 
 auto sort3(std::string& a, std::string& b, std::string& c) -> void
 {
-    // TODO
-    (void)a;
-    (void)b;
-    (void)c;
+	if (a > c) {
+		std::swap(a, c);
+	}
+
+	if (b > c) {
+		std::swap(b, c);
+	}
+
+	if (a > b) {
+		std::swap(a, b);
+	}
 }

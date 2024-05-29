@@ -1,8 +1,15 @@
-#include <fstream>
 #include <iostream>
+#include <fstream>
 
-int main(void)
+int main()
 {
-    // TODO
+    std::string buffer {};
+
+    std::ifstream file {"my_file.txt"};
+
+    std::getline(file, buffer);
+    // or std::cout << buffer << '\n';
+    std::cout << buffer << std::endl;
+
     return 0;
 }
