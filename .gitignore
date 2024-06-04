@@ -63,4 +63,14 @@ exercises-w1/sort3_test
 exercises-w1/namespace
 exercises-w1/cat_file
 
+exercises-w2/mc_q1
+exercises-w2/mc_q2
+exercises-w2/mc_q3
+exercises-w2/mc_q4
+exercises-w2/assortment_test
+exercises-w2/mismatch_test
+exercises-w2/mixer_test
+exercises-w2/permutation_test
+exercises-w2/scale_test
+
 # End of https://www.toptal.com/developers/gitignore/api/c++,cmake
