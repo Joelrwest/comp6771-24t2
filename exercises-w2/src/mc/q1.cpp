@@ -1,48 +1,24 @@
+#include <vector>
 #include <iostream>
 
 /*
-Question 2.2.2
+Question 2.3.3
 
-Which overload of put would be selected and why?
+What kind of error is displayed in the below code?
 
-a) Overload 1: put was called with a char.
-b) Overload 2: put was called with a mutable char and and references have higher priority.
-c) Overload 3: put was called with a const char and const references have higher priority.
-d) No overload: this call is ambiguous.
+a) Link-time error: i is just a variable declaration and the real i hasn't been defined yet.
+b) Logic error: i is uninitialised and so its use is illegal.
+c) Logic error: v is not used after the for-loop.
+d) Run-time error: pushing back continuously to a vector can result in an "out of memory" error
 */
 
-// Overload 1
-auto put(char) -> void
+int main()
 {
-    std::cout << "Calling overload 1!\n";
-}
-
-// Overload 2
-auto put(char &) -> void
-{
-    std::cout << "Calling overload 2!\n";
-}
-
-// Overload 3
-auto put(const char &) -> void
-{
-    std::cout << "Calling overload 3!\n";
-}
-
-int main(void)
-{
-    // This doesn't work
-    /*
-    char c1 = 'a';
-    do_something(c1);
-    */
-
-    // This also doesn't work,
-    // but does const change anything?
-    /*
-    const char c2 = 'a';
-    do_something(c2);
-    */
-
-    return 0;
+    std::vector<int> v;
+    int i;
+    while (i > 0)
+    {
+        v.push_back(i);
+        --i;
+    }
 }

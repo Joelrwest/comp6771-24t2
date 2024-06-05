@@ -1,0 +1,27 @@
+vector:
+- Resizable array
+- ArrayList in Java, List in Python, Vec in Rust
+- Items are stored on the heap
+- Supports random access (i.e., O(1) indexing)
+- Potentially O(n) to add/remove elements
+- Your goto "container" for a lot of cases
+
+list:
+- Doubly-linked list
+- LinkedList in Java and Rust
+- No random access
+- O(1) for adding/deleting anywhere
+
+set/map:
+- Binary tree
+- Sets store values, maps store (key, value) pairs
+- No random access and iterates in an order (which can be customised)
+- O(log n) operations
+
+unordered_set/unordered_map:
+- Hashset/hashmap
+- No random access and iterates in undefined ordering
+- Expected O(1) operations
+- Prefer these over set/map
+
+And many more... array, deque, stack, queue, priority_queue, span...

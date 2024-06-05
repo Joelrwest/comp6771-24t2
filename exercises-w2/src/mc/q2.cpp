@@ -1,19 +1,44 @@
+#include <iostream>
+
 /*
-Question 2.3.4
+Question 2.2.2
 
-What kind of error is displayed in the below code?
+Which overload of do_something would be selected and why?
 
-a) Logic-error: you are only allowed to return numbers in the range [-128, 128] from main().
-b) Runtime-error: new can fail allocation and throws an exception if that happens
-c) Compile-time error: int{42} is invalid syntax.
-d) Logic-error: programmer did not check if ptr was nullptr or not before dereferencing.
+a) Overload 1: do_something was called with a char.
+b) Overload 2: do_something was called with a mutable char and and references have higher priority.
+c) Overload 3: do_something was called with a const char and const references have higher priority.
+d) No overload: this call is ambiguous.
 */
 
-int main()
+// Overload 1
+auto do_something(char) -> void
 {
-    int *ptr = new int {42};
+    std::cout << "Calling overload 1!\n";
+}
 
-    *ptr = 6771;
+// Overload 2
+auto do_something(char &) -> void
+{
+    std::cout << "Calling overload 2!\n";
+}
 
-    return *ptr;
+// Overload 3
+auto do_something(const char &) -> void
+{
+    std::cout << "Calling overload 3!\n";
+}
+
+int main(void)
+{
+    // This doesn't work
+    char c1 = 'a';
+    do_something(c1);
+
+    // This also doesn't work,
+    // but does const change anything?
+    const char c2 = 'a';
+    do_something(c2);
+
+    return 0;
 }
