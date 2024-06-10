@@ -4,6 +4,7 @@ vector:
 - Items are stored on the heap
 - Supports random access (i.e., O(1) indexing)
 - Potentially O(n) to add/remove elements
+- [1, 2, 3, 4, 5]
 - Your goto "container" for a lot of cases
 
 list:

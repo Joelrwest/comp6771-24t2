@@ -2,15 +2,18 @@
 
 auto sort(std::vector<int>& ivec) -> void
 {
-    (void)ivec; // remove this when implemented
+    std::sort(ivec.begin(), ivec.end());
 }
 
 auto sort(std::array<int, 4>& iarr) -> void
 {
-    (void)iarr; // remove this when implemented
+    std::sort(iarr.begin(), iarr.end());
 }
 
 auto sort(std::list<int>& ilist) -> void
 {
-    (void)ilist; // remove this when implemented
+    // ilist.sort();
+    std::vector<int> copy {ilist.begin(), ilist.end()};
+    sort(copy);
+    std::copy(copy.begin(), copy.end(), ilist.begin());
 }
